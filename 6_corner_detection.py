@@ -11,8 +11,10 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Corner detection algorithm
 corners = cv2.goodFeaturesToTrack(gray, 100, 0.55, 10)
+
 # convert them into int
 corners = np.int0(corners)
+
 # find corners and make circle shape for them
 for corner in corners:
     x, y = corner.ravel()
